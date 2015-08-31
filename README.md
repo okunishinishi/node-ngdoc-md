@@ -76,7 +76,15 @@ injectmock.restoreAll();
 Examples
 -----
 ```javascript
+#!/usr/bin/env node
+
 var ngdocMd = require('ngdoc-md');
+
+ngdocMd('src/javascripts/*.js', 'docs/apiguide', {
+
+}, function(err){
+    /*...*/
+});
 ```
 
 <!-- Section from "docs/readme/03.Examples.md.hbs" End -->

@@ -5,6 +5,11 @@
 
 var ngdocMd = require('../lib/ngdoc_md.js');
 
+var path = require('path');
+
+var basedir = path.resolve(__dirname, '..'),
+    tmpDir = path.resolve(basedir, 'tmp');
+
 exports.setUp = function(done) {
     done();
 };
@@ -15,6 +20,16 @@ exports.tearDown = function(done) {
 
 exports['Ngdoc md'] = function(test){
 
-    test.done();
+    ngdocMd(
+        path.resolve(basedir, 'docs/mockups/angular-module-mockup/*.js'),
+        path.resolve(tmpDir, 'foo/bar/testing-angular-module-mockup-doc'),
+        {
+
+        },
+        function(err){
+            test.ifError(err);
+            test.done();
+        }
+    );
 };
 
