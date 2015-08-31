@@ -44,7 +44,7 @@ Installation
 -----
 
 ```bash
-npm install ngdoc-md --save-dev
+npm install ngdoc-md --g
 ```
 
 <!-- Section from "docs/readme/01.Installation.md.hbs" End -->
@@ -53,28 +53,51 @@ npm install ngdoc-md --save-dev
 
 <a name="section-docs-readme-02-usage-md"></a>
 Usage
-----
+-----
 
-Injecting mock:
+Generate ngdoc documents from js source files.
 
-```javascript
-var injectmock = require('injectmock');
-injectmock(myModule, 'myFunction', myMockFunction);
+```bash
+$ ngdoc-md "src/javascripts/**/*.js" "docs/apiguide"
 ```
 
-Restoring Original:
 
-```javascript
-injectmock.restoreAll();
+#### Options
+
+```bash
+$ ngdoc-md -h
+
+  Usage: ngdoc-md [options] <src> <dest>
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+    -v, --verbose  Show verbose log.
+    -b, --basedir  Working directory path.
+
+
 ```
+
 
 <!-- Section from "docs/readme/02.Usage.md.hbs" End -->
 
-<!-- Section from "docs/readme/03.Examples.md.hbs" Start -->
+<!-- Section from "docs/readme/03.Programmatic.md.hbs" Start -->
 
-<a name="section-docs-readme-03-examples-md"></a>
-Examples
+<a name="section-docs-readme-03-programmatic-md"></a>
+Programmatic API
 -----
+
+`ngdoc-md` also provides programmatic API.
+
+Install as a local module,
+
+```bash
+$ npm installinstall ngdoc-md --save-dev
+```
+
+then,
+
 ```javascript
 #!/usr/bin/env node
 
@@ -87,7 +110,7 @@ ngdocMd('src/javascripts/*.js', 'docs/apiguide', {
 });
 ```
 
-<!-- Section from "docs/readme/03.Examples.md.hbs" End -->
+<!-- Section from "docs/readme/03.Programmatic.md.hbs" End -->
 
 
 <!-- Sections Start -->
@@ -103,3 +126,13 @@ This software is released under the [MIT License](https://github.com/okunishinis
 <!-- LICENSE End -->
 
 
+<!-- Links Start -->
+<a name="links"></a>
+
+Links
+------
+
++ [dgeni](https://github.com/angular/dgeni)
++ [dgeni-markdown](https://github.com/k-kinzal/dgeni-markdown)
+
+<!-- Links End -->

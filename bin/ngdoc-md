@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+/**
+ * @file Bins script for ngdoc-md.
+ */
+
+"use strict";
+
+
+var program = require('commander'),
+    pkg = require('../package'),
+    ngdocMd = require('../lib/ngdoc_md');
+
+program
+    .usage('[options] <src> <dest>')
+    .version(pkg['version'])
+    .option('-v, --verbose', "Show verbose log.")
+    .option('-b, --basedir', "Working directory path.")
+    .parse(process.argv);
+
+
+var args = program.args;
+
+ngdocMd(args[0], args[1], {
+    basedir: program.basedir || process.cwd()
+});
