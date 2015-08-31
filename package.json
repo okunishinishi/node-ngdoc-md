@@ -1,6 +1,6 @@
 {
   "name": "ngdoc-md",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate ngdoc with markdown format. ",
   "bin": {
     "ngdoc-md": "bin/ngdoc-md"
@@ -43,13 +43,13 @@
     "execcli": "^2.1.1"
   },
   "dependencies": {
-    "argx": "^1.1.5",
+    "argx": "^1.1.6",
     "arrayreduce": "^1.0.2",
-    "async": "^1.4.0",
-    "colorprint": "^1.1.1",
+    "async": "^1.4.2",
+    "colorprint": "^1.1.2",
     "commander": "^2.8.1",
     "dgeni": "^0.4.1",
     "dgeni-markdown": "0.0.3",
-    "dgeni-packages": "^0.10.18"
+    "dgeni-packages": "^0.10.19"
   }
 }

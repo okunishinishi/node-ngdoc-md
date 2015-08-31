@@ -15,7 +15,7 @@ program
     .usage('[options] <src> <dest>')
     .version(pkg['version'])
     .option('-v, --verbose', "Show verbose log.")
-    .option('-b, --basedir', "Working directory path.")
+    .option('-b, --basedir <basedir>', "Working directory path.")
     .parse(process.argv);
 
 

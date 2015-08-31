@@ -71,10 +71,10 @@ $ ngdoc-md -h
 
   Options:
 
-    -h, --help     output usage information
-    -V, --version  output the version number
-    -v, --verbose  Show verbose log.
-    -b, --basedir  Working directory path.
+    -h, --help               output usage information
+    -V, --version            output the version number
+    -v, --verbose            Show verbose log.
+    -b, --basedir <basedir>  Working directory path.
 
 
 ```
