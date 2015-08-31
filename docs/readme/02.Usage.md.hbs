@@ -1,0 +1,15 @@
+Usage
+----
+
+Injecting mock:
+
+```javascript
+var injectmock = require('injectmock');
+injectmock(myModule, 'myFunction', myMockFunction);
+```
+
+Restoring Original:
+
+```javascript
+injectmock.restoreAll();
+```
