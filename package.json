@@ -1,6 +1,6 @@
 {
   "name": "ngdoc-md",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate ngdoc with markdown format. ",
   "bin": {
     "ngdoc-md": "bin/ngdoc-md"
