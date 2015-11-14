@@ -18,7 +18,6 @@ program
     .option('-b, --basedir <basedir>', "Working directory path.")
     .parse(process.argv);
 
-
 var args = program.args;
 
 ngdocMd(args[0], args[1], {

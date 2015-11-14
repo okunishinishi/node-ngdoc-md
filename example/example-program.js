@@ -2,8 +2,6 @@
 
 var ngdocMd = require('ngdoc-md');
 
-ngdocMd('src/javascripts/*.js', 'docs/apiguide', {
-
-}, function(err){
+ngdocMd('src/javascripts/*.js', 'doc/apiguide', {}, function (err) {
     /*...*/
 });
