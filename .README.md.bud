@@ -9,7 +9,7 @@ var apeTmpl = require('ape-tmpl'),
 
 module.exports = apeTmpl.readmeMdBud({
     pkg: pkg,
-    repo: 'okunishinishi/node-' + pkg.name,
+    repo: pkg.repository,
     sections: 'doc/readme/*.md.hbs',
     badges: {
         travis: true,
@@ -19,12 +19,11 @@ module.exports = apeTmpl.readmeMdBud({
         npm: true
     },
     links: require('./doc/links.json'),
-    vars:{
-        get help(){
+    vars: {
+        get help() {
             var ngdocBin = require.resolve('./bin/ngdoc-md');
             var cp = require('child_process');
-            var cmd = [ngdocBin, '-h'].join(' ');
-            if(cp.execSync){
+            if (cp.execSync) {
                 return cp.execSync(ngdocBin + ' -h');
             }
         }
